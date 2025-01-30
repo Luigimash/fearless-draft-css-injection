@@ -1,0 +1,365 @@
+/*
+    Change overall default font and the background color
+*/
+body {
+    background-color: #0F0F0F;
+    font-family: "Helvetica", sans-serif;
+}
+/*
+    Change the margins and spacing of the entire draft container
+*/
+.draft-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 5px;
+}
+
+
+/*
+    Change the font and timer location
+*/
+#timer {
+    font-size: 45px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top:-10px
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px; /*default 5px*/
+    margin-bottom: 0px; /*default 10px*/
+    padding: 0 0px; /*default 0 5px*/
+}
+/*
+    Edit the red and blue side headers 
+*/
+.blue-side-header {
+    margin-right: 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 60px; /*default 40px*/
+    width: 320px; /*default 240px*/
+    color: #ffffff;
+    background-color: #c3a003;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:24px; /*default 18px*/
+}
+.red-side-header {
+    margin-right: 0px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 60px; /*default 40px*/
+    width: 320px; /*default 240px*/
+    color: #ffffff;
+    background-color: #c3a003;
+    display: flex;
+    justify-content: center;
+    font-family:inherit; /*edit font-family to change the font type*/
+    align-items: center;
+    font-size:24px; /*default 18px*/
+}
+
+/*
+    Disabling the role icons 
+*/
+.role-icon {
+    width: 0px; /*default 30px*/
+    height: 0px; /*default 30px */
+    margin-right: 0px; /*default 10px*/
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/*
+    Disabling the top right search bar
+*/
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0px; /*default 0 5px*/
+}
+.search-bar input {
+    padding: 0px; /*default 3px*/
+    font-size: 0px; /*default 18px*/
+    color: #747474;
+    border: 0px solid #ccc; /*default 1px*/
+    border-radius: 0px; /*default 4px*/
+    background-color: black;
+}
+
+/*
+    Disabling the champion grid
+*/
+.champion-icon {
+    width: 0px; /*default 75px*/   
+    height: 0px; /*default 75px*/
+    margin: 0px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
+/*
+    Usually you won't need to touch these.
+    Change the width of the blue and red side containers as a whole.
+    Can add margins if you'd like to shift them around individually for some reason
+*/
+.blue-side {
+  width: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /*<---------*/
+}
+.red-side {
+  width: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /*<---------*/
+}
+/*
+    Change the size and shape of the blue and red side ban containers 
+*/
+#blue-bans {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3px;
+    margin-left: 0px;
+}
+
+#red-bans {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+    margin-right: -10px;
+}
+/*
+    Change the size and shape of the PICKED champion icons 
+*/
+.pick-slot {
+    width: 320px; /*default 240px*/
+    height: 150px; /*default 85px*/
+    border-radius: 4px; /*default 4px*/
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /*default 18px*/
+    margin-bottom: 5px; /*default 5px*/
+    overflow: hidden;
+}
+/*
+    Change the font characteristics of the blue and red side champ names
+*/
+.blue-side .champion-name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: right;
+    padding: 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:24px;
+    font-family:"Poppins Semibold", bold; /*Change font type here*/
+}
+.red-side .champion-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: left;
+    padding: 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:24px;
+    font-family:"Poppins Semibold", bold; /*Change font type here*/
+}
+
+/*
+    Change the individual size of the normal ban icons
+*/
+.ban-slot {
+    width: 56px; /*default 35px*/
+    height: 56px; /*default 35px*/
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+
+/*
+    Change the location of the overall FEARLESS bans container
+*/
+#blue-fearless-bans {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 7px;
+    margin-left: 0px;
+    /*If you want to make the fearless bans wrap around, you should uncomment the below CSS*/
+    
+    flex-wrap:wrap;
+    width:320px;
+    
+}
+
+#red-fearless-bans {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7px;
+    margin-right: -5px; /*need to add -5px margin (default) to make red side line up properly*/
+    /*If you want to make the fearless bans wrap around, you should uncomment the below CSS*/
+    
+    flex-wrap:wrap;
+    width:320px; 
+    
+}
+
+/*
+    Change the size of the FEARLESS ban icons 
+*/
+.fearless-ban-slot {
+    width: 27px;
+    height: 27px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 1.5px 2.5px; /*default 0px 2.5px*/
+    overflow: hidden;
+}
+
+
+/*disabling the buttons on spectator*/
+#confirmButton {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(236, 209, 59);
+    border: 0;
+}
+
+  
+/*disabling the end buttons on spectator*/
+#switchSidesButton,
+#finishSeriesButton {
+    display: block;
+    margin: 0 0px;
+    padding: 0px 0px;
+    font-size: 0px;
+    background-color: rgb(236, 209, 59);
+    border: 0;
+}
+
+#blue-picks {
+    display:flex;
+    flex-direction: column;
+}
+
+#red-picks {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+    The rest of the CSS tags, I don't think you'll ever need to touch these but they're here if you want to see them.
+    If you want to get an up to date dump of the CSS from the website, you can just use inspect element,
+    navigate to the {} style tab, and ctrl+s to download the CSS in its entirety, or just copy+paste it. 
+
+    If you want to edit your CSS injection by viewing and editing it in a browser w/ Inspect Element as opposed to using the
+    CSS injection in OBS, you can uncomment the CSS below and copy+paste this whole block into the Styles/CSS of the page inspect
+    element tool to overwrite the native CSS with this one. 
+*/
+
+/*
+.champion-pool-container {
+    flex-grow: 1;
+    margin: 0 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.champion-pool-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.role-filter {
+    display: flex;
+    align-items: center;
+}
+
+
+.role-icon.active {
+    opacity: 1;
+}
+
+.champion-pool {
+    flex-grow: 1;
+    max-height: 425px;
+    overflow-y: auto;
+    border: 0px solid #515151;
+    padding: 5px;
+}
+#blue-fearless-bans::before,
+#red-fearless-bans::before {
+    content: "";
+    flex-grow: 1;
+}
+#confirmButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+  }
+  
+ .pick-slot img:not([src$="/img/placeholder.png"]){
+    object-position: center 30%;
+}
+.pick-slot img,
+.ban-slot img,
+.fearless-ban-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.champion-icon:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+  
+.champion-icon.selected {
+    box-sizing: border-box;
+    border: 2px solid rgb(236, 209, 59);
+    z-index: 2;
+}
+
+#champion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 0fr));
+    grid-gap: 2px;
+    justify-items: center;
+}
+*/
